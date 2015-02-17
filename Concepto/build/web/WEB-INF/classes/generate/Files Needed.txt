@@ -1,0 +1,5 @@
+/Concepto/build/web/WEB-INF/classes/generate/engmalt.linear-1.7.mco
+/Concepto/build/web/WEB-INF/classes/generate/lingpipe-4.1.0.jar
+/Concepto/build/web/WEB-INF/classes/generate/MajorCore.jar
+/Concepto/build/web/WEB-INF/classes/generate/MajorCoreII.jar
+/Concepto/build/web/WEB-INF/classes/generate/ollie-app-latest.jar

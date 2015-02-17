@@ -1,0 +1,9 @@
+Harvesting of a crop	is	important task
+mature	be The cutting of crop after	Harvesting
+mature	be The cutting of	crop
+mature	is called	harvesting
+cutting of crop	is	mature
+crops	are pulled out in	harvesting
+It	usually takes in	3 to 4 months
+This process	is called	threshing
+Farmers	do	separation of grain

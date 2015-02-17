@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimal-ui">
+
+<script type="text/javascript" charset="utf-8">
+	document.addEventListener('DOMContentLoaded', function () {
+		var menuCapture = document.getElementById("navhidden").innerHTML;
+		document.getElementById("nav").innerHTML = document.getElementById("navhidden").innerHTML;
+	});
+</script>
+
+</head>
+
+<body class='splash-page  wsite-theme-light'>
+<div class="page-container">
+	<div class="page-sidebar-wrapper">
+    	<div class="page-sidebar">
+				<div id="navhidden" class="nav">{menu}</div>
+				<div id="nav" class="nav"></div>
+		</div>
+    </div><!-- end page-sidebar-wrapper -->
+    <input type="checkbox" id="nav-trigger" class="nav-trigger">
+  	<div class="page-content-wrapper">
+    	<div class="page-content wsite-background">
+				<div class="content-wrap-outer">
+				<div id="header-wrap">
+					<div class="container">
+						<table id="header">
+							<tr>
+								<td id="nav-handle"><label for="nav-trigger"></label></td>
+								<td id="logo">{logo}</td>
+								<td id="search"><span class="search-icon"></span>{search}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="splash-inner">
+					<div class="splash-content">
+						<div id="splash-content-inner">
+						{content}
+						</div>
+					</div>
+				</div>
+				</div><!-- end splash-content -->
+				<div id="footer-wrap"><div class="container">{footer}</div></div>
+       </div>
+    </div><!-- end page-content-wrapper -->
+</div><!-- end page-container -->
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="/files/theme/jquery.jqtransform.js" ></script>
+	<script type="text/javascript" src="/files/theme/mobile.js" ></script>
+	<script language="javascript" src="/files/theme/custom.js"></script>
+	<script language="javascript">
+		jQuery(function() {
+			var $ = jQuery;
+			$('#main-wrap .wsite-form-radio-container, .wsite-com-product-option-dropdown, .wsite-com-product-option-radio').jqTransform();
+		});
+	</script>
+</body>
+
+</html>

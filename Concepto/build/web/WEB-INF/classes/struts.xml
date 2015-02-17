@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.multipart.saveDir" value="/home/chanakya/NetBeansProjects/Concepto/web/WEB-INF" />
+    <constant name="struts.multipart.maxSize" value="1000000" />
+    <constant name="struts.ui.theme" value="css_xhtml" />
+    <constant name="struts.custom.i18n.resources" value="global" />
+    <package name="generate" extends="struts-default">
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.NullPointerException"
+                               result="error" />
+        </global-exception-mappings>
+        <action name="generatemap" class="generate.MapGenerateAction">
+            <interceptor-ref name="exception"/>
+            <interceptor-ref name="alias"/>
+            <interceptor-ref name="i18n"/>
+             <interceptor-ref name="checkbox"/>
+            <interceptor-ref name="multiselect"/>  
+            
+            <interceptor-ref name="modelDriven"/>
+                      
+            
+                     
+
+            <interceptor-ref name="params">
+                <param name="excludeParams">^dojo\..*,^struts\..*,^session\..*,^request\..*,^application\..*,^servlet(Request|Response)\..*,^parameters\..*,^action:.*,^method:.*</param>
+            </interceptor-ref>
+            <interceptor-ref name="servletConfig"/>
+            <interceptor-ref name="prepare"/>
+            <interceptor-ref name="chain"/>
+            <interceptor-ref name="basicStack"/>
+            <interceptor-ref name="fileUpload">
+                <param name="allowedTypes">text/plain</param>
+                <param name="maximumSize">102400</param>
+            </interceptor-ref>
+            <interceptor-ref name="staticParams"/>
+            <interceptor-ref name="actionMappingParams"/>
+            <interceptor-ref name="params">
+                <param name="excludeParams">^dojo\..*,^struts\..*,^session\..*,^request\..*,^application\..*,^servlet(Request|Response)\..*,^parameters\..*,^action:.*,^method:.*</param>
+            </interceptor-ref>
+            <interceptor-ref name="conversionError"/>
+            <interceptor-ref name="validation">
+                <param name="excludeMethods">input,back,cancel,browse</param>
+            </interceptor-ref>
+            <interceptor-ref name="workflow">
+                <param name="excludeMethods">input,back,cancel,browse</param>
+            </interceptor-ref>
+            <result name="success">/story.html</result>
+            <result name="input">/generate.jsp</result>
+            <result name="error">/home.jsp</result>
+        </action>
+        <action name="showarticles" class="generate.ShowArticlesAction">
+            <result name="success">/browse.jsp</result>
+            <result name="error">/home.jsp</result>
+        </action>
+        <action name="showconceptmap" class="generate.ShowConceptMapAction">
+            <result name="success">/story.html</result>
+            <result name="error">/home.jsp</result>
+        </action>
+    </package>
+    
+</struts>    
